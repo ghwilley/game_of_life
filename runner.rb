@@ -1,8 +1,10 @@
 require_relative 'world'
-require_relative 'cell'
+puts "dimensions: "
 dimensions = gets.chomp
 live_cells = 0
-world = World.new(dimensions, live_cells)
+puts "generations: "
+generations = gets.chomp
+world = World.new(dimensions, live_cells, generations)
 
 world.generate_board
 

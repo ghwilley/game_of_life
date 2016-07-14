@@ -1,13 +1,15 @@
+require_relative 'cell'
+
 class World
 	attr_reader :dimensions, :board
-	def initialize(dimensions, live_cells)
+	def initialize(dimensions, live_cells, generations)
 		@live_cells = live_cells
 		@dimensions = dimensions
 		@board = Array.new(dimensions.to_i) { ". " * dimensions.to_i  }
 	end
 
 	def inject_life
-		
+
 	end
 
 	def generate_board
