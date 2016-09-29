@@ -9,8 +9,21 @@ class World
 	end
 
 	def inject_life
+		until @live_cells <= 0
+			@board[rand(dimensions)] = Cell.new()
 
+			@live_cells -= 1
+		end
+		
 	end
+
+	def gen_live_cells
+		@board.each do |cell|  
+			if cell.alive?
+				cell = "x "
+		end
+	end
+
 
 	def generate_board
 		puts @board.join("\n")

@@ -6,5 +6,7 @@ puts "generations: "
 generations = gets.chomp
 world = World.new(dimensions, live_cells, generations)
 
+world.inject_life
+
 world.generate_board
 
